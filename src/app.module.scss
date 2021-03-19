@@ -1,0 +1,117 @@
+/**
+******** LAYOUT ********
+**/
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+// Colors Vars
+$white: #ffffff;
+$black: #221F1F;
+$grayLight: #ECECEC;
+$grayDark: #ABABAB;
+$orangeLight: #FFA23E;
+$orangeDark: #FF7700;
+$blueLight: #7DCFF3;
+$blueDark: #009DD8;
+$greenLight: #D4DE29;
+$greenMedium: #D4DE29;
+$greenDark: #B9C400;
+
+$laptop-breakpoint: 1650px;
+$small-laptop-breakpoint: 1024px;
+$tablet-breakpoint: 780px;
+$mobile-breakpoint: 375px;
+$small-mobile-breakpoint: 320px;
+
+
+.body {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 0.83vw;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 6vw 0 0 0;
+    background-color: $white;
+    justify-content: space-between;
+
+    @media (max-width: $laptop-breakpoint){
+        font-size: 1.83vw;
+    }
+    @media (max-width: $tablet-breakpoint){
+        font-size: 2.83vw;
+    }
+    @media (max-width: $mobile-breakpoint){
+        font-size: 4.83vw;
+    }
+    @media (max-width: $small-mobile-breakpoint){
+        font-size: 5.83vw;
+    }
+}
+
+h1 {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 3.02vw;
+    text-transform: uppercase;
+    line-height: 120%;
+    margin-bottom: 20px;
+
+    @media (max-width: $laptop-breakpoint){
+        font-size: 3.53vw;
+    }
+    @media (max-width: $tablet-breakpoint){
+        font-size: 4.03vw;
+    }
+    @media (max-width: $mobile-breakpoint){
+        font-size: 5.03vw;
+    }
+    @media (max-width: $small-mobile-breakpoint){
+        font-size: 6.03vw;
+    }
+}
+
+h2 {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 1.04vw;
+    font-weight: 500;
+    margin-bottom: 3vw;
+    line-height: 150%;
+
+    @media (max-width: $laptop-breakpoint){
+        font-size: 2.04vw;
+    }
+    @media (max-width: $tablet-breakpoint){
+        font-size: 3.54vw;
+    }
+    @media (max-width: $mobile-breakpoint){
+        font-size: 5.04vw;
+    }
+    @media (max-width: $small-mobile-breakpoint){
+        font-size: 6.04vw;
+    }
+}
+
+p {
+    font-family: 'Istok Web', sans-serif;
+    margin-top: 5px;
+
+    @media (max-width: $laptop-breakpoint){
+        font-size: 1.34vw;
+        margin-top: 10px;
+    }
+    @media (max-width: $tablet-breakpoint){
+        font-size: 2.84vw;
+        margin-top: 15px;
+    }
+    @media (max-width: $mobile-breakpoint){
+        font-size: 3.84vw;
+        margin-top: 20px;
+    }
+    @media (max-width: $small-mobile-breakpoint){
+        font-size: 4.34vw;
+        margin-top: 25px;
+    }
+}
