@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import CustomButton from '../custom-button/custom-button.component';
+import FormErrors from '../form-errors/form-errors.component';
 
-import './form-step4.styles.scss';
+import './form-step6.styles.scss';
 
-export class FormStep4 extends Component {
-  continue = (e) => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
+export class FormStep6 extends Component {
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
+  };
+
+  submit = async (event) => {
+    event.preventDefault();
+    this.props.handleSubmit();
   };
 
   errorClass(error) {
@@ -20,41 +21,49 @@ export class FormStep4 extends Component {
   }
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, valid, errors } = this.props;
+
     return (
-      <div className="layer4">
+      <div className="layer6">
         <div className="digital-name"></div>
         <div className="white-box">
           <div className="logo"></div>
           <div className="form-container">
             <h1>Intern Feedback Survey</h1>
             <h2>Thanks for all of your hard work!</h2>
+            <FormErrors formErrors={errors} />
             <div className="fields-wrapper">
               <TextField
                 type="text"
-                name="skills_gain"
-                defaultValue={values.skills_gain}
+                name="recommend_program"
+                defaultValue={values.recommend_program}
                 className={`form__textarea ${this.errorClass(
-                  values.formErrors.skills_gain
+                  values.formErrors.firstName
                 )}`}
-                id="skills_gain"
-                label="What new skills, techniques, and knowledge did you gain during your internship?"
+                id="recommend_program"
+                label="Would you recommend our internship program to a friend? Why or why not?"
                 multiline
                 rows={14}
                 required
-                onChange={handleChange('skills_gain')}
+                onChange={handleChange('recommend_program')}
               />
               <div className="buttons-container">
                 <CustomButton onClick={this.back}>Back</CustomButton>
-                <CustomButton onClick={this.continue}>Next</CustomButton>
+                <CustomButton
+                  type="submit"
+                  onClick={this.submit}
+                  disabled={!valid}
+                >
+                  Submit
+                </CustomButton>
               </div>
               <div className="dots-wrapper">
                 <div className="dot"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
               </div>
             </div>
           </div>
@@ -64,4 +73,4 @@ export class FormStep4 extends Component {
   }
 }
 
-export default FormStep4;
+export default FormStep6;

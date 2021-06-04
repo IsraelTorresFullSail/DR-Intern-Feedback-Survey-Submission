@@ -7,6 +7,7 @@ import FormStep2 from '../form-step2/form-step2.component';
 import FormStep3 from '../form-step3/form-step3.component';
 import FormStep4 from '../form-step4/form-step4.component';
 import FormStep5 from '../form-step5/form-step5.component';
+import FormStep6 from '../form-step6/form-step6.component';
 
 export class FeedbackForm extends Component {
   constructor(props) {
@@ -27,7 +28,6 @@ export class FeedbackForm extends Component {
         firstName: '',
         lastName: '',
         semester_year: '',
-        duration: '',
         teams_worked: {},
         favorite_part: '',
         skills_gain: '',
@@ -37,7 +37,6 @@ export class FeedbackForm extends Component {
       firstNameValid: false,
       lastNameValid: false,
       semester_yearValid: false,
-      durationValid: false,
       favorite_partValid: false,
       skills_gainValid: false,
       improve_programValid: false,
@@ -75,7 +74,6 @@ export class FeedbackForm extends Component {
     let firstNameValid = this.state.firstNameValid;
     let lastNameValid = this.state.lastNameValid;
     let semester_yearValid = this.state.semester_yearValid;
-    let durationValid = this.state.durationValid;
     let favorite_partValid = this.state.favorite_partValid;
     let skills_gainValid = this.state.skills_gainValid;
     let improve_programValid = this.state.improve_programValid;
@@ -95,14 +93,8 @@ export class FeedbackForm extends Component {
           : ' is empty or too short';
         break;
       case 'semester_year':
-        semester_yearValid = value.length >= 2;
+        semester_yearValid = value.length >= 1;
         fieldValidationErrors.semester_year = semester_yearValid
-          ? ''
-          : ' is empty or too short';
-        break;
-      case 'duration':
-        durationValid = value.length >= 2;
-        fieldValidationErrors.duration = durationValid
           ? ''
           : ' is empty or too short';
         break;
@@ -139,7 +131,6 @@ export class FeedbackForm extends Component {
         firstNameValid: firstNameValid,
         lastNameValid: lastNameValid,
         semester_yearValid: semester_yearValid,
-        durationValid: durationValid,
         favorite_partValid: favorite_partValid,
         skills_gainValid: skills_gainValid,
         improve_programValid: improve_programValid,
@@ -155,7 +146,6 @@ export class FeedbackForm extends Component {
         this.state.firstNameValid &&
         this.state.lastNameValid &&
         this.state.semester_yearValid &&
-        this.state.durationValid &&
         this.state.favorite_partValid &&
         this.state.skills_gainValid &&
         this.state.improve_programValid &&
@@ -277,7 +267,7 @@ export class FeedbackForm extends Component {
                 <FormStep2
                   nextStep={this.nextStep}
                   prevStep={this.prevStep}
-                  handleChange={this.handleCheckboxChange}
+                  handleCheckboxChange={this.handleCheckboxChange}
                   values={values}
                 />
               );
@@ -302,6 +292,15 @@ export class FeedbackForm extends Component {
             case 5:
               return (
                 <FormStep5
+                  nextStep={this.nextStep}
+                  prevStep={this.prevStep}
+                  handleChange={this.handleChange}
+                  values={values}
+                />
+              );
+            case 6:
+              return (
+                <FormStep6
                   prevStep={this.prevStep}
                   handleSubmit={this.handleSubmit}
                   handleChange={this.handleChange}

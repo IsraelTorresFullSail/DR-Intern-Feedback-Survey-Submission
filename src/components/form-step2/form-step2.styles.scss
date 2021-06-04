@@ -86,7 +86,6 @@
         }
         @media (max-width: $tablet-breakpoint){
             max-width: 95vw;
-            min-height: 182.08vw;
             padding: 6.23vw 7.5vw;
             background-size: 140.35vw auto;
             background-position: 5% 40%;
@@ -231,8 +230,6 @@
                 background-color: #ffffff;
                 border-radius: 30px;
                 padding: 25px;
-                max-height: 195vw;
-                color: $black;
             }
 
             @media (max-width: $mobile-breakpoint){

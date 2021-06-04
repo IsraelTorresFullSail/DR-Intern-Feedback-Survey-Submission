@@ -53,31 +53,37 @@
         border-radius: 34px;
         box-shadow: 0px 0px 78px #1D1D1D1A;
         background-color: $white;
-        background-image: url('../../assets/blob4.svg'), url('../../assets/team.png');
-        background-size: 85.15vw auto, 56.93vw auto;
+        background-image: url('../../assets/blob4.svg'), url('../../assets/team.jpg');
+        background-size: 85.15vw auto, 65.93vw auto;
         background-repeat: no-repeat;
-        background-position: 374% 50%, 138% 50%;
+        background-position: 374% 50%, 250% 50%;
         //animation: .5s ease slide-animation;
 
         @media (max-width: $laptop-breakpoint){
             max-width: 75.04vw;
-            background-size: 88.15vw auto, 60.93vw auto;
-            background-position: 400% 50%, 150% 50%;
+            background-size: 88.15vw auto, 88.93vw auto;
+            background-position: 400% 50%, -10% 50%;
         }
         @media (max-width: $small-laptop-breakpoint){
             max-width: 85vw;
-            background-size: 103.22vw auto, 64.93vw auto;
-            background-position: 310% 50%, 150% 50%;
+            background-size: 103.22vw auto, 96.93vw auto;
+            background-position: 310% 50%, -100% 50%;
         }
         @media (max-width: $tablet-breakpoint){
             max-width: 95vw;
-            background-size: 0vw auto, 175% auto;
+            background-size: 0vw auto, 235% auto;
             background-position: 0% 0%, 40% 50%;
             padding-top: 30px;
         }
         @media (max-width: $mobile-breakpoint){
             max-width: 95vw;
-            background-size: 0vw auto, 220% auto;
+            background-size: 0vw auto, 320% auto;
+            background-position: 0% 0%, 40% 50%;
+            padding-top: 30px;
+        }
+        @media (max-width: $small-mobile-breakpoint){
+            max-width: 95vw;
+            background-size: 0vw auto, 360% auto;
             background-position: 0% 0%, 40% 50%;
             padding-top: 30px;
         }
@@ -97,7 +103,6 @@
                 width: 30%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 padding: 3.49vw 2.79vw 4.49vw 3.19vw;
 
                 @media (max-width: $tablet-breakpoint){
@@ -108,23 +113,38 @@
                 }
 
                 .content {
+                    .h2-success {
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                    }
+
+                    .p-step {
+                        margin-top: 24px;
+                        margin-bottom: 10px;
+                        .p-strong {
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    
                     .copy-testimonial {
                         width: 100%;
                         min-width: 170px;
-                        margin-top: 24px;
+                        max-width: 170px;
                         margin-bottom: 10px;
-                        padding: 10px 10px 10px 50px;
+                        padding: 10px 10px 10px 60px;
+                        background: #f1f1f1;
                         background-image: url('../../assets/copy.svg');
                         background-size: 20px auto;
                         background-repeat: no-repeat;
-                        background-position: 5% 50%;
-                        border-radius: 10px;
+                        background-position: 10% 50%;
+                        border-radius: 99px;
                         border: 1px solid $white;
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
-                        color: #25A9E0;
+                        color: $black;
                         cursor: pointer;
                         transition: all ease .3s;
 
@@ -141,18 +161,25 @@
                 }
 
                 .social-media-container {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
+                    .p-step {
+                        margin-top: 24px;
+                        margin-bottom: 10px;
+                        .p-strong {
+                            font-weight: 600;
+                        }
+                    }
 
                     .social-media-link {
+                        width: 100%;
+                        min-width: 170px;
+                        max-width: 230px;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                        flex-direction: row;
+                        justify-content: flex-start;
                         align-items: center;
                         padding: 10px;
-                        border-radius: 10px;
+                        background: #f1f1f1;
+                        border-radius: 99px;
                         border: 1px solid $white;
                         color: $black;
                         text-decoration: none;
@@ -163,73 +190,20 @@
                             border: 1px solid #bfbfbf;
                         }
 
-                        .sm-logo-fb {
-                            width: 64px;
-                            height: 64px;
-                            border-radius: 50%;
-                            background-color: #3B5796;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            box-shadow: 0px 2px 5px #0000000F;
-                            margin-bottom: 16px;
-
-                            @media (max-width: $laptop-breakpoint){
-                                width: 54px;
-                                height: 54px;
-                            }
-                            @media (max-width: $small-laptop-breakpoint){
-                                width: 64px;
-                                height: 64px;
-                            }
-                            @media (max-width: $tablet-breakpoint){
-                                max-width: 95vw;
-                                background-size: 123.22vw auto;
-                            }
-                            @media (max-width: $mobile-breakpoint){
-                                max-width: 95vw;
-                                background-size: 133.22vw auto;
-                            }
-                        }
                         .sm-logo-gg {
-                            width: 64px;
-                            height: 64px;
-                            border-radius: 50%;
-                            background-color: #ffffff;
+                            margin-right: 15px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            box-shadow: 0px 2px 5px #0000000F;
-                            margin-bottom: 16px;
 
-                            @media (max-width: $laptop-breakpoint){
-                                width: 54px;
-                                height: 54px;
-                            }
-                            @media (max-width: $small-laptop-breakpoint){
-                                width: 64px;
-                                height: 64px;
+                            .glassdoor-img {
+                                width: 100%;
+                                max-width: 32px;
+                                margin-left: 10px;
                             }
                         }
-                        .sm-logo-yp {
-                            width: 64px;
-                            height: 64px;
-                            border-radius: 50%;
-                            background-color: #B01418;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            box-shadow: 0px 2px 5px #0000000F;
-                            margin-bottom: 16px;
-
-                            @media (max-width: $laptop-breakpoint){
-                                width: 54px;
-                                height: 54px;
-                            }
-                            @media (max-width: $small-laptop-breakpoint){
-                                width: 64px;
-                                height: 64px;
-                            }
+                        .p-share {
+                            margin-top: 0px;
                         }
                     }
                 }
@@ -240,7 +214,7 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
-                padding: 5.23vw 7.5vw;
+                padding: 3.23vw 7.5vw;
 
                 @media (max-width: $tablet-breakpoint){
                     width: 100%;

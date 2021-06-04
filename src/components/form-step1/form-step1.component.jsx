@@ -69,11 +69,7 @@ export class FormStep1 extends Component {
                 required
                 onChange={handleChange('semester_year')}
               />
-              <FormControl
-                className={`select__input ${this.errorClass(
-                  values.formErrors.duration
-                )}`}
-              >
+              <FormControl className="select__input">
                 <InputLabel>Duration of Internship</InputLabel>
                 <Select
                   name="duration"

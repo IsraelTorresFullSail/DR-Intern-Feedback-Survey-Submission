@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import gdImage from '../../assets/glassdoor.png';
 import './success.styles.scss';
 
 class Success extends Component {
@@ -26,11 +28,43 @@ class Success extends Component {
               <div className="success-left">
                 <div className="content">
                   <h1>Thank you!</h1>
-                  <p>
-                    We loved having you as part of the #DReamteam and can’t wait
-                    to see your career evolve!
+                  <p className="p-last">
+                    We appreciate your honest feedback! Kudos to you for all of
+                    your hard work!
                   </p>
                   <p>#WeAreDR</p>
+                  <p className="p-step">
+                    <span className="p-strong">Step 1: </span> Click to Copy
+                  </p>
+                  <CopyToClipboard
+                    className="copy-testimonial"
+                    text={this.state.testimonial}
+                    onCopy={() => this.setState({ copied: true })}
+                  >
+                    <p>Copy</p>
+                  </CopyToClipboard>
+                  {this.state.copied ? (
+                    <span style={{ color: 'red' }}>Copied.</span>
+                  ) : null}
+                </div>
+                <div className="social-media-container">
+                  <p className="p-step">
+                    <span className="p-strong">Step 2: </span> Click to Share
+                  </p>
+                  <a
+                    href="https://www.glassdoor.com/Reviews/Digital-Resource-Reviews-E1027153.htm"
+                    className="social-media-link"
+                    target="_blank"
+                  >
+                    <div className="sm-logo-gg">
+                      <img
+                        src={gdImage}
+                        alt="Glassdoor"
+                        className="glassdoor-img"
+                      />
+                    </div>
+                    <p className="p-share">Share to Glassdoor</p>
+                  </a>
                 </div>
               </div>
               <div className="success-right">

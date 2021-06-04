@@ -70,19 +70,20 @@
 
         @media (max-width: $laptop-breakpoint){
             max-width: 75.04vw;
-            background-size: 40.35vw auto;
-            background-position: -15% 80%;
+            background-size: 35.35vw auto;
+            background-position: 0% 80%;
+            padding: 3.23vw 4.5vw;
         }
         @media (max-width: $small-laptop-breakpoint){
             max-width: 85vw;
             background-size: 48.35vw auto;
-            background-position: -15% 50%;
+            background-position: -30% 70%;
         }
         @media (max-width: $tablet-breakpoint){
             max-width: 95vw;
             padding: 6.23vw 7.5vw;
-            background-size: 96.35vw auto;
-            background-position: 0% 50%;
+            background-size: 72.35vw auto;
+            background-position: -105% 40%;
         }
         @media (max-width: $mobile-breakpoint){
             max-width: 95vw;
@@ -132,56 +133,16 @@
             justify-content: flex-start;
             align-items: flex-start;
 
-            .radio-buttons-wrapper {
-                width: 100%;
-                max-width: 32vw;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                align-items: flex-start;
-                border: 1px solid #F2F2F2;
-                border-radius: 15px;
-                margin-bottom: 25px;
-                padding: 1vw;
+            .p-ghost {
+                opacity: 0.5;
+                margin-bottom: 10px;
+              }
+        
+              .required {
+                color: $required;
+              }
 
-                @media (max-width: $laptop-breakpoint){
-                    max-width: 35vw;
-                }
-                @media (max-width: $small-laptop-breakpoint){
-                    max-width: 45vw;
-                }
-                @media (max-width: $tablet-breakpoint){
-                    max-width: 100%;
-                }
-                @media (max-width: $mobile-breakpoint){
-                    background-color: $white;
-                    color: $black;
-                    padding: 10px;
-                }
-
-                label.form-labels {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    flex-wrap: wrap;
-                    align-items: flex-start;
-
-                    .span {
-                        width: 100%;
-                        margin-bottom: 1vw;
-                    }
-
-                    .form__labelInline {
-                        width: 20%;
-
-                        .form__input__radio {
-                            margin-right: 5px;
-                        }
-                    }
-                }
-            }
+            
 
             .fields-wrapper {
                 width: 100%;
@@ -197,6 +158,29 @@
                     border-radius: 15px !important;
                     padding: 15px !important;
                     border: none !important;
+
+                    label {
+                        opacity: 0.8;
+                        margin-left: 15px !important;
+                        margin-right: 15px !important;
+                    }
+            
+                    span {
+                        color: $required;
+                    }
+
+                    @media (max-width: $laptop-breakpoint){
+                        max-height: 20vw !important;
+                    }
+                    @media (max-width: $small-laptop-breakpoint){
+                        max-height: 40vw !important;
+                    }
+                    @media (max-width: $tablet-breakpoint){
+                        max-height: 60vw !important;
+                    }
+                    @media (max-width: $mobile-breakpoint){
+                        max-height: 60vw !important;
+                    }
                 }
                 .has-error {
                     border: 1px solid #ff5b5f !important;
@@ -236,13 +220,13 @@
                 width: 55%;
             }
             @media (max-width: $small-laptop-breakpoint){
-                width: 75%;
+                width: 55%;
+            }
+            @media (max-width: $tablet-breakpoint){
+                width: 65%;
                 background-color: #ffffff;
                 border-radius: 30px;
                 padding: 25px;
-            }
-            @media (max-width: $tablet-breakpoint){
-                width: 100%;
             }
             @media (max-width: $mobile-breakpoint){
                 width: 100%;
