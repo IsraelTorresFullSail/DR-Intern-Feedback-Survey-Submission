@@ -32,9 +32,13 @@ class Success extends Component {
                     We appreciate your honest feedback! Kudos to you for all of
                     your hard work!
                   </p>
-                  <p>#WeAreDR</p>
+                  <p>
+                    Want to spread the word? We'd love it if you left us a
+                    review.
+                  </p>
                   <p className="p-step">
-                    <span className="p-strong">Step 1: </span> Click to Copy
+                    <span className="p-strong">Step 1: </span> Click to Leave a
+                    Review
                   </p>
                   <CopyToClipboard
                     className="copy-testimonial"
