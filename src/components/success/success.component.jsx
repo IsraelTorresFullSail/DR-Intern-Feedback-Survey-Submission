@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+//import { CopyToClipboard } from 'react-copy-to-clipboard';
 import gdImage from '../../assets/glassdoor.png';
 import './success.styles.scss';
 
@@ -36,28 +36,12 @@ class Success extends Component {
                     Want to spread the word? We'd love it if you left us a
                     review.
                   </p>
-                  <p className="p-step">
-                    <span className="p-strong">Step 1: </span> Click to Leave a
-                    Review
-                  </p>
-                  <CopyToClipboard
-                    className="copy-testimonial"
-                    text={this.state.testimonial}
-                    onCopy={() => this.setState({ copied: true })}
-                  >
-                    <p>Copy</p>
-                  </CopyToClipboard>
-                  {this.state.copied ? (
-                    <span style={{ color: 'red' }}>Copied.</span>
-                  ) : null}
                 </div>
                 <div className="social-media-container">
-                  <p className="p-step">
-                    <span className="p-strong">Step 2: </span> Click to Share
-                  </p>
+                  <p className="p-step"></p>
                   <a
                     href="https://www.glassdoor.com/Reviews/Digital-Resource-Reviews-E1027153.htm"
-                    className="social-media-link"
+                    className="social-media-link-gd"
                     target="_blank"
                   >
                     <div className="sm-logo-gg">
@@ -67,7 +51,7 @@ class Success extends Component {
                         className="glassdoor-img"
                       />
                     </div>
-                    <p className="p-share">Share to Glassdoor</p>
+                    <p className="p-share">Leave a Glassdoor Review</p>
                   </a>
                 </div>
               </div>
